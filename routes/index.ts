@@ -17,6 +17,18 @@ class IndexRoute {
 		res.render("index/index");
 	}
 
+	public async shows(req: app.Request, res: app.Response) {
+		res.render("index/shows");
+	}
+
+	public async sobre(req: app.Request, res: app.Response) {
+		res.render("index/sobre");
+	}
+
+	public async cadastro(req: app.Request, res: app.Response) {
+		res.render("index/cadastro");
+	}
+
 	@app.http.post()
 	// Configuração adicional para poder receber FormData e/ou arquivos.
 	@app.route.formData()
