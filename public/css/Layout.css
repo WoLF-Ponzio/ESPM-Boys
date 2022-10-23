@@ -1,1 +1,14 @@
-css da página principal
+.endbar{
+    background-color:rgba(19, 19, 19, 0.9);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+.titulo-end{
+    color:#E7D6C3;
+    font-family: "Rocking";
+}
+.texto-end{
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
