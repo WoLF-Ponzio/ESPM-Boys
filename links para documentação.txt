@@ -20,3 +20,10 @@ https://jqueryvalidation.org/reference/
 https://jqueryvalidation.org/category/methods/
 https://jqueryvalidation.org/category/plugin/
 https://jqueryvalidation.org/category/validator/
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ Referencias
+https://codepen.io/ondrejsvestka/pen/eRzMgG  23/10/2022 - NavBar Bootstrap

@@ -1,109 +1,29 @@
-﻿<form id="form">
-	<div>
-		<label for="nome">Nome</label>
-		<input type="text" id="nome" name="nome" maxlength="50" />
-	</div>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
 
-	<div>
-		<label for="email">E-mail</label>
-		<input type="email" id="email" name="email" maxlength="50" />
-	</div>
+		<img src="../../public/Imagens/Logo_Capivara_Navbar.png" alt="">
+		<span class="navbar-brand mb-0 h1">Logo</span>
 
-	<div>
-		<label for="foto">Foto</label>
-		<input type="file" id="foto" name="foto" accept="image/*" />
-	</div>
-
-	<div>
-		<button type="submit">Criar Pessoa</button>
-	</div>
-</form>
-
-<!--
-	jQuery
-
-	jQuery API
-	https://api.jquery.com/
--->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!--
-	jQuery Validation
-
-	jQuery Validation Plugin
-	https://jqueryvalidation.org/
-	https://jqueryvalidation.org/documentation/#link-list-of-built-in-validation-methods
-	https://jqueryvalidation.org/category/methods/
-	https://jqueryvalidation.org/category/plugin/
-	https://jqueryvalidation.org/category/validator/
--->
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/localization/messages_pt_BR.min.js"></script>
-
-<!--
-	Isso é só um helper para podermos descobrir quantos fetch() estão em execução!
-
-	Ele funciona da mesma forma que a Fetch API original, só que cria uma variável
-	global fetchAtivo, para contar quantos fetch() estão em execução :)
-
-	Documentação da Fetch API original:
-	https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
--->
-<script src="/public/js/fetch.js"></script>
-
-<script type="text/javascript">
-
-	$("#form").validate({
-		rules: {
-			// Aqui o que vale é o name, não o id!
-			nome: {
-				required: true,
-				minlength: 3
-			},
-			email: {
-				required: true
-			},
-			foto: {
-				required: true
-			}
-		},
-
-		submitHandler: function (form) {
-			// Não pode simplesmente fazer submitHandler: criarPessoa, porque criarPessoa() é async... :(
-			criarPessoa(form);
-		}
-	});
-
-	async function criarPessoa(form) {
-		// Vamos prevenir cliques duplos/acidentais :)
-		if (fetchAtivo) {
-			return;
-		}
-
-		let opcoes = {
-			method: "POST",
-			// Esta forma não depende do jQuery, não precisa configurar o header e
-			// ainda permite o envio de arquivos! Mas precisa de uma linha de configuração
-			// a mais do lado do Node.js!
-		    body: new FormData(form)
-		};
-
-		try {
-			let response = await fetch("/criarPessoa", opcoes);
-
-			if (response.ok) {
-				// Limpa os campos para facilitar a criação da próxima pessoa.
-				form.reset();
-				// Limpa os erros e sucessos.
-				$(form).validate().resetForm();
-
-				alert("Pessoa criada com sucesso!");
-			} else {
-				alert("Erro ao criar a pessoa!");
-			}
-		} catch (ex) {
-			alert("Erro de rede: " + ex.message);
-		}
-	}
-</script>
+	</nav>
+	
+</body>
+</html>
