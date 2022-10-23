@@ -1,1 +1,18 @@
-css da página principal
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(19, 19, 19);
+}
+li, a, button{
+    text-decoration: none;
+    color: #edf0f1;
+    font-size: 16px;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
