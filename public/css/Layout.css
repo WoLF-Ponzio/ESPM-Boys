@@ -1,4 +1,16 @@
 
+/*Configuração Geral das Páginas*/
+.limitador{
+    max-width: 1200px;
+    margin: 0px, auto;
+}
+img{
+    max-width: 100%;
+}
+.background-geral{
+    background-color: #252525;
+
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +18,7 @@
 
 }
 
-
+/* Endbar */
 .endbar{
     background-color:rgba(19, 19, 19, 0.9);
     padding-top: 20px;

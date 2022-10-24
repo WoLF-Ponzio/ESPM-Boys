@@ -25,106 +25,113 @@
 </head>
 
 <body>
-	<header>
-    <nav class="navbar navbar-expand-sm navbar-dark " style="background-color:#2b2b2b;">
-        
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Bandas <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active" >
-              <a class="nav-link" href="#">Discos</a>
-            </li>
+    
+    <div class="limitador">
+
+        <header>
+
+            <nav class="navbar navbar-expand-sm navbar-dark " style="background-color:#2b2b2b;">
+                
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Bandas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active" >
+                    <a class="nav-link" href="#">Discos</a>
+                    </li>
+                    
+                </ul>
+                </div>
+                <img class="" style="border-radius: 50%;"height="55" width="55"src="/public/Imagens/Logo_Capivara_Navbar.png" alt="logo">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Shows <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Sobre</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <%- body %>
+
+    <footer>
+        <div class="container-fluid endbar">
             
-          </ul>
-        </div>
-        <img class="" style="border-radius: 50%;"height="55" width="55"src="/public/Imagens/Logo_Capivara_Navbar.png" alt="logo">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Shows <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Sobre</a>
-              </li>
-            </ul>
-        </div>
-      </nav>
-    </header>
-	<%- body %>
-    <main>
-        <h1>asdasd</h1>
-        <h2>asdasdasd</h2>
-    </main>
-<footer>
-	<div class="container-fluid endbar">
-        
-        <div class="row">
+            <div class="row">
 
-            <div class="col-sm-4">
+                <div class="col-sm-4">
 
-                <ul>
+                    <ul>
 
+                        <h3 class="titulo-end">
+                            Sobre nós
+                        </h3>
+
+
+                        <p class="texto-end">
+                            Somos estudantes do curso de sistemas de informações da ESPM. O desenvolvimento do site, foi feito para fins acadêmicos.
+                        </p>
+
+                        <p class="texto-end">
+                            Caso tenha interesse no template, entre em contato via Github!
+                        </p>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <ul>
+
+                        <h3 class="titulo-end">
+                            Informações uteis
+                        </h3>
+                        
+                        <p class="texto-end">
+                            Para o projeto, foram utilizados referências criativas para o desenvolvimente do site, que estão disponíveis no link abaixo.
+                        </p>
+
+                        <a class="texto-end" href="/links para documentação.txt" >
+                            Referências bibliográficas
+                        </a>
+                        
+                        
+                    </ul>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <ul>
+                    
                     <h3 class="titulo-end">
-                        Sobre nós
-                    </h3>
+                        Atenção
+                    </h3> 
 
+                        <p class="texto-end">
+                            Toda a propriedade intelectual é de pertencimento da banda Capivaras Mutantes™!
+                        </p>
+                    
+                        <img src="/public/Imagens/Capivaras Sem fundo.png" width="100" lang="100" alt="logo_capivaras">
 
-                    <p class="texto-end">
-                        Somos estudantes do curso de sistemas de informações da ESPM. O desenvolvimento do site, foi feito para fins acadêmicos.
-                    </p>
+                    </ul>
 
-                    <p class="texto-end">
-                        Caso tenha interesse no template, entre em contato via Github!
-                    </p>
-
-                </ul>
+                    
+                </div>
 
             </div>
-
-            <div class="col-sm-4">
-
-                <ul>
-
-                    <h3 class="titulo-end">
-                        Informações uteis
-                    </h3>
-                    
-                    <p class="texto-end">
-                        Para o projeto, foram utilizados referências criativas para o desenvolvimente do site, que estão disponíveis no link abaixo.
-                    </p>
-
-                    <a class="texto-end" href="" >
-                        Referências bibliográficas
-                    </a>
-                    
-                    
-                </ul>
-
-            </div>
-
-            <div class="col-sm-4">
-
-                <ul>
-                   
-                   <h3 class="titulo-end">
-                      Atenção
-                   </h3> 
-
-                    <p class="texto-end">
-                        Toda a propriedade intelectual é de pertencimento da banda Capivaras Mutantes™!
-                    </p>
-                
-                </ul>
-
-                
-            </div>
-
+            
         </div>
-        
-    </div>
-</footer>
+
+    </footer>
+</div>
 </body>
 </html>
