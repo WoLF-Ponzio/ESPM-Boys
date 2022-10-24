@@ -26,4 +26,9 @@ https://jqueryvalidation.org/category/validator/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  Referencias
+https://sydarthur.co.uk/ 15/10/2022 - Insipiração de conseito
+https://www.rush.com/ 20/10/2022 - Ideias de Layout
+https://www.yesworld.com/ 20/10/2022 - Ideias de Layout
 https://codepen.io/ondrejsvestka/pen/eRzMgG  23/10/2022 - NavBar Bootstrap
+https://getbootstrap.com/docs/4.6/components/carousel/ 23/10/2022 - Carousel Bootstrap
+
