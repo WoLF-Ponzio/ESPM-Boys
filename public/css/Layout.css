@@ -8,7 +8,7 @@ img{
     max-width: 100%;
 }
 .background-geral{
-    background-color: #252525;
+    background-color: rgba(37, 37, 37, 1);
 
 }
 * {
