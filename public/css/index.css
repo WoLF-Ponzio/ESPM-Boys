@@ -1,14 +1,15 @@
 /*Cabeçalho da página*/
+.link-container{
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
 .titulo{
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 20px;
     font-family: 'Rocking';
     text-align: center;
     font-size: 70px;
     color:#E7D6C3;
-}
-.link-container{
-    padding-top: 100px;
-    padding-bottom: 10px;
 }
 link{
     text-align: left;
