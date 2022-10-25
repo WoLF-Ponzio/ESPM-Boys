@@ -1,0 +1,32 @@
+/*Cabeçalho da página*/
+.titulo{
+    padding-top: 100px;
+    font-family: 'Rocking';
+    text-align: center;
+    font-size: 70px;
+    color:#E7D6C3;
+}
+.link-container{
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+link{
+    text-align: left;
+}
+
+/*carrossel*/
+.carousel .carousel-inner{
+    height:500px
+    }
+    .carousel-inner .carousel-item img{
+    min-height:200px;
+    /*prevent it from stretch in screen size < than 768px*/
+    object-fit:cover
+    }
+    
+    @media(max-width:768px){
+    .carousel .carousel-inner{
+    /*prevent it from adding a white space between carousel and container elements*/
+    height:auto
+     }
+    }
