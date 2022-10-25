@@ -7,6 +7,9 @@
 img{
     max-width: 100%;
 }
+html{
+    background-color: #202020;
+}
 .background-geral{
     background-color: rgba(37, 37, 37, 1);
 
