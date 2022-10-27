@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node src/app"
+    "start": "tsc && node src/app"
   },
   "description": "projeto",
   "author": {
