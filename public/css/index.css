@@ -31,3 +31,22 @@ link{
     height:auto
      }
     }
+
+/*Layout inferior*/
+
+.organizacao{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.titulo-index{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Rocking';
+    color: #E7D6C3;
+    text-align: center;
+}
+.texto-index{
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+}

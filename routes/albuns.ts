@@ -22,9 +22,9 @@ class AlbunsRoute {
 		res.render("albuns/capivaras");
 	}
 
-	@app.route.methodName("reis-sem-coroa")
+	@app.route.methodName("rei-sem-coroa")
 	public async reis(req: app.Request, res: app.Response) {
-		res.render("albuns/reis");
+		res.render("albuns/rei");
 	}
 }
 

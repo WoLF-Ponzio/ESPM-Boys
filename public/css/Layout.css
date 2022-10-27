@@ -1,19 +1,30 @@
+/*fontes pesonalizadas*/
+@font-face {
+    font-family: 'Boneless';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Boneless.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rocking';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Rocking.ttf') format('truetype');
+}
 
 /*Configuração Geral das Páginas*/
 .limitador{
     max-width: 1300px;
-    margin: 0px, auto;
+    margin: 0px auto;
 }
 img{
     max-width: 100%;
 }
-html{
-    background-color: #202020;
-}
-
-.background-geral{
+.background-geral, body{
     background-color: rgba(37, 37, 37, 1);
-
 }
 * {
     box-sizing: border-box;
@@ -36,4 +47,12 @@ html{
 .texto-end{
     color: white;
     font-family: 'Overpass', sans-serif;
+}
+
+.link {
+    text-align: right;
+}
+
+.link > a {
+    text-decoration: none;
 }

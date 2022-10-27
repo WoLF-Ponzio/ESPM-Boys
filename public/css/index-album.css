@@ -1,0 +1,29 @@
+/*Cabeçalho Página*/
+.secao-1{
+    padding-top: 75px;
+    padding-bottom: 10px;
+}
+
+.titulo{
+    padding-bottom: 20px;
+    font-family: 'Rocking';
+    text-align: center;
+    font-size: 70px;
+    color:#E7D6C3;
+}
+
+/*Conteúdo Cards/Álbuns*/
+.titulo-alb{
+    font-family: 'Rocking';
+    text-align: left;
+    font-size: 40px;
+    color: #E7D6C3;
+}
+.data-alb{
+    font-family: 'Overpass', sans-serif;
+    color: white;
+    text-align: right;
+}
+.card {
+    background-color:rgb(62, 62, 62);
+}
