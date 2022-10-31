@@ -78,6 +78,6 @@ img{
 }
 
 .nav-link:hover {
-    background-color: #f00;
-    color: #fff;
+    color: rgba(255, 0, 0, 0.509);
+    
 }
