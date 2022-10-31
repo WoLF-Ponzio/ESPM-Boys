@@ -56,3 +56,28 @@ img{
 .link > a {
     text-decoration: none;
 }
+
+.nav-col-img {
+    position: relative;
+    min-width: 140px;
+    max-width: 140px;
+}
+
+@media (min-width: 576px) {
+
+    .nav-col-img {
+        min-width: 100px;
+        max-width: 100px;
+    }
+
+}
+
+.nav-link {
+    padding: 1rem 0.5rem;
+    color: #f00;
+}
+
+.nav-link:hover {
+    background-color: #f00;
+    color: #fff;
+}
