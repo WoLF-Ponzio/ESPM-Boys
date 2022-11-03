@@ -24,7 +24,7 @@ img{
     max-width: 100%;
 }
 .background-geral, body{
-    background-color: rgba(37, 37, 37, 1);
+    background-color: rgb(48, 48, 48);
 }
 * {
     box-sizing: border-box;
