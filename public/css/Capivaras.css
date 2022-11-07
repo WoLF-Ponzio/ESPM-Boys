@@ -1,20 +1,20 @@
 /*Parte Superior*/
 .secao-1{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 .titulo{
     font-family: 'Rocking';
     text-align: center;
     font-size: 70px;
     color:#E7D6C3;
+    padding-bottom: 25px;
 }
-.img-capivars{
+.img-capivaras{
     text-align: center;
 }
 /*Formatação Texto Sobre o Disco*/
 .titulo-trivia{
-    display: inline-block;
     padding-top: 30px;
     font-family: 'Rocking';
     text-align: center;
