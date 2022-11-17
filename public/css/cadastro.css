@@ -1,0 +1,13 @@
+.secao-1{
+    padding-top: 75px;
+}
+.titulo{
+    text-align: center;
+    font-size: 70px;
+    color:#E7D6C3;
+    padding-bottom: 35px;
+}
+.botoes{
+    text-align: center;
+    display: inline-block;
+}
