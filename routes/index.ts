@@ -30,37 +30,28 @@ class IndexRoute {
 	}
 
 	@app.http.post()
-	// Configuração adicional para poder receber FormData e/ou arquivos.
-	@app.route.formData()
 	public async criarPessoa(req: app.Request, res: app.Response) {
 		// Os dados enviados via POST ficam dentro de req.body
-		let pessoa = req.body;
+		let evento = req.body;
 
 		// É sempre muito importante validar os dados do lado do servidor,
 		// mesmo que eles tenham sido validados do lado do cliente!!!
-		if (!pessoa) {
+		if (!evento) {
 			res.status(400);
 			res.json("Dados inválidos");
 			return;
 		}
 
-		if (!pessoa.nome) {
+		if (!evento.nome) {
 			res.status(400);
 			res.json("Nome inválido");
 			return;
 		}
 
-		if (!pessoa.email) {
+		if (!evento.email) {
 			res.status(400);
 			res.json("E-mail inválido");
 			return;
-		}
-
-		// Verifica se a foto foi enviada
-		if (req.uploadedFiles && req.uploadedFiles.foto) {
-			console.log("Foto enviada! Tamanho: " + req.uploadedFiles.foto.size);
-		} else {
-			console.log("Foto não enviada!");
 		}
 
 		await app.sql.connect(async (sql) => {
@@ -68,7 +59,7 @@ class IndexRoute {
 			// Todas os comandos SQL devem ser executados aqui dentro do app.sql.connect().
 
 			// As interrogações serão substituídas pelos valores passados ao final, na ordem passada.
-			await sql.query("INSERT INTO pessoa (nome, email) VALUES (?, ?)", [pessoa.nome, pessoa.email]);
+			await sql.query("INSERT INTO evento (nome, email) VALUES (?, ?)", [evento.nome, evento.email]);
 
 		});
 
