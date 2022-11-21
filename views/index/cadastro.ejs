@@ -1,5 +1,5 @@
-﻿ <main>  
-   <div class="container-fluid secao-1">
+﻿<main>
+    <div class="container-fluid secao-1">
         <h1 class="titulo">
 
             Administração de Shows!
@@ -45,11 +45,48 @@
 
 <script type="text/javascript">
 
-    function criarShow() {
-        
+    async function criarShow() {
+
+        try {
+
+            let nome = document.getElementById("nome");
+            let data = document.getElementById("data");
+            let link = document.getElementById("link");
+            let endereco = document.getElementById("endereco");
+
+            let cadastroShow = {
+                nome: nome.value,
+                data: data.value,
+                link: link.value,
+                endereco: endereco.value
+            };
+
+            let opcoes = {
+                method: "POST",
+                body: JSON.stringify(cadastroShow),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+
+            let resposta = await fetch("/criarEvento", opcoes);
+
+            //Aviso sobre o envio
+            if (!resposta.ok) {
+                alert("Ocorreu um erro ao criar o show! Tente novamente!");
+            } else {
+                alert("Show Criado com sucesso");
+            }
+
+        } catch (excecao) {
+            // Erro de Rede
+            alert("Erro de rede: " + excecao.message);
+        }
+
     }
 
 </script>
 
 <%- contentFor("head") %>
-<link rel="stylesheet" type="text/css" href="/public/css/cadastro.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/public/css/cadastro.css" />

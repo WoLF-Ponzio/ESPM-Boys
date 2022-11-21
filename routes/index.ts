@@ -30,7 +30,7 @@ class IndexRoute {
 	}
 
 	@app.http.post()
-	public async criarPessoa(req: app.Request, res: app.Response) {
+	public async criarEvento(req: app.Request, res: app.Response) {
 		// Os dados enviados via POST ficam dentro de req.body
 		let evento = req.body;
 
