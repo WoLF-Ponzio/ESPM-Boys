@@ -48,9 +48,21 @@ class IndexRoute {
 			return;
 		}
 
-		if (!evento.email) {
+		if (!evento.data) {
 			res.status(400);
-			res.json("E-mail inválido");
+			res.json("Data inválido");
+			return;
+		}
+
+		if (!evento.link) {
+			res.status(400);
+			res.json("Link inválido");
+			return;
+		}
+
+		if (!evento.endereco) {
+			res.status(400);
+			res.json("Endereço inválido");
 			return;
 		}
 
@@ -59,7 +71,7 @@ class IndexRoute {
 			// Todas os comandos SQL devem ser executados aqui dentro do app.sql.connect().
 
 			// As interrogações serão substituídas pelos valores passados ao final, na ordem passada.
-			await sql.query("INSERT INTO evento (nome, email) VALUES (?, ?)", [evento.nome, evento.email]);
+			await sql.query("INSERT INTO evento (nome, data, link, endereco) VALUES (?, ?, ?, ?)", [evento.nome, evento.data, evento.link, evento.endereco]);
 
 		});
 
