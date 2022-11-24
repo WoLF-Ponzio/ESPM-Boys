@@ -18,7 +18,19 @@ class IndexRoute {
 	}
 
 	public async shows(req: app.Request, res: app.Response) {
-		res.render("index/shows");
+		let shows: any[];
+
+		await app.sql.connect(async (sql) => {
+
+			shows = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento ORDER BY data DESC");
+
+		});
+
+		const opcoes = {
+			shows: shows
+		};
+
+		res.render("index/shows", opcoes);
 	}
 
 	public async sobre(req: app.Request, res: app.Response) {
@@ -50,7 +62,7 @@ class IndexRoute {
 
 		if (!evento.data) {
 			res.status(400);
-			res.json("Data inválido");
+			res.json("Data inválida");
 			return;
 		}
 

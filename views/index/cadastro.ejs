@@ -54,6 +54,8 @@
             let link = document.getElementById("link");
             let endereco = document.getElementById("endereco");
 
+            // @@@ validar
+
             let cadastroShow = {
                 nome: nome.value,
                 data: data.value,
@@ -75,6 +77,10 @@
             if (!resposta.ok) {
                 alert("Ocorreu um erro ao criar o show! Tente novamente!");
             } else {
+                nome.value = "";
+                data.value = "";
+                link.value = "";
+                endereco.value = "";
                 alert("Show Criado com sucesso");
             }
 
