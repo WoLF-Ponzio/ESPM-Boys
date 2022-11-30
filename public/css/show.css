@@ -1,3 +1,32 @@
+.container {
+    padding: 2px 16px;
+    border-radius: 12px;
+    
+    }
+
+    .promo {
+    background: #ccc;
+    }
+    .colunaEsquerda{
+        background-color: black;
+        border-radius:12px 0px 0px 12px;
+    }
+    .coupon {
+        border: 3px dashed; /* Dotted border */
+        
+        border-radius: 12px; /* Rounded border */
+        margin: 0 auto; /* Center the coupon */
+        max-width: 1000px;
+        border-color: black; 
+       
+        }
+    .ticket{
+        background-color: rgb(73, 255, 97);
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 80%;
+        margin: auto;
+    }
 .link{
     display: inline-block;
 }
