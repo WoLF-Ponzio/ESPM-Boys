@@ -22,12 +22,28 @@ class IndexRoute {
 
 		await app.sql.connect(async (sql) => {
 
-			shows = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento ORDER BY data DESC");
+			shows = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data >= sysdate() ORDER BY data DESC");
 
 		});
 
 		const opcoes = {
 			shows: shows
+		};
+
+		res.render("index/shows", opcoes);
+	}
+
+	public async showsPassados(req: app.Request, res: app.Response) {
+		let showsPassados: any[];
+
+		await app.sql.connect(async (sql) => {
+
+			showsPassados = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data < sysdate() ORDER BY data DESC");
+
+		});
+
+		const opcoes = {
+			showsPassados: showsPassados
 		};
 
 		res.render("index/shows", opcoes);

@@ -18,7 +18,35 @@
 		</div>
 	<% } %>
 
+	<h1>Shows Passados</h1>
+
 </div>
 
 <%- contentFor("head") %>
 <link rel="stylesheet" type="text/css" href="/public/css/show.css"/>
+
+<script>
+
+		const regLT = /\</g;
+		const regGT = /\>/g;
+		const regAPOS = /\'/g;
+		const regQUOT = /\"/g;
+		const regGRAVE = /\`/g;
+
+			function encode(texto) {
+
+				if(!texto){
+					return "";
+				}
+
+				let temp = texto.replace(regLT, "&lt;");
+				temp = temp.replace(regGT, "&gt;");
+				temp = temp.replace(regAPOS, "&apos;");
+				temp = temp.replace(regQUOT, "&quot;");
+				temp = temp.replace(regGRAVE, "&grave;");
+
+				return temp;
+
+			}
+			
+</script>
