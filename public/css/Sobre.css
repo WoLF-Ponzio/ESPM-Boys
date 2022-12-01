@@ -4,12 +4,28 @@
     text-align: center;
     color: #E7D6C3;
 }
-
+.texto-sobre{
+    font-size:20px;
+}
 .secao1{
     padding-top: 75px;
     padding-bottom: 35px;
 }
-
+.secao-texto{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: rgb(29, 29, 29); 
+    box-shadow: 2px 2px 2px #000;
+}
+.padding{
+    padding-bottom: 75px;
+}
+.secao-imagem{
+    padding-top: 45px;
+    padding-bottom: 30px;
+}
 .imagemPonzio{
     width: 150px; /* width of container */
     height: 150px; /* height of container */
@@ -17,10 +33,6 @@
     object-position:-30px;
     border-radius: 50%;
     border: 1px solid #E7D6C3;
-}
-.espacoImagem{
-    padding-left: 15px;
-    padding-right: 15px;
 }
 .imagemVictor{
     width: 150px; /* width of container */
@@ -34,7 +46,11 @@
     width: 150px; /* width of container */
     height: 150px; /* height of container */
     object-fit:cover;
-    object-position: 0px 5px;
+    object-position: 0px -20px;
     border-radius: 50%;
     border: 1px solid #E7D6C3;
+}
+.espacoImagem{
+    padding-left: 15px;
+    padding-right: 15px;
 }
