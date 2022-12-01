@@ -23,7 +23,12 @@ class IndexRoute {
 		await app.sql.connect(async (sql) => {
 
 			shows = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data >= sysdate() ORDER BY data DESC");
-
+			
+			for(let i=0; i < shows.length; i++){
+			var mesData = new Array();
+			mesData[i] = new Date(shows[i].data).getMonth();
+			
+		} 
 		});
 
 		const opcoes = {
