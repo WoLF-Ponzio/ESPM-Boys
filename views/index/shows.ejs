@@ -1,5 +1,9 @@
 ﻿<div id="lista">
-	<h1>Shows</h1>
+	<div>
+		<h1 class="tituloShow">
+			Shows
+		</h1>
+	</div>
 
 	<% for (let i = 0; i < shows.length; i++) { %>
 		<div class="ticket">
@@ -11,7 +15,7 @@
                             <h2 class="mes">Out</h2>
 						</div>
 						<div class="col-sm-6" >
-							<h1>
+							<h1 class="tituloCupom">
 								<%= shows[i].nome %>
 							</h1>
 							<div class="textoCoupom">
