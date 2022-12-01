@@ -19,22 +19,27 @@ class IndexRoute {
 
 	public async shows(req: app.Request, res: app.Response) {
 		let shows: any[];
+		let dateDataBase:any[];
 		var  mesData = [];
 		
 		await app.sql.connect(async (sql) => {
 
 			shows = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data >= sysdate() ORDER BY data DESC");
-			
-			for(let i=0; i < shows.length; i++){
-			
-			mesData[i] = new Date(shows[i].data).getMonth().toString();
-			
+			dateDataBase = await sql.query("SELECT idshow, nome,date_format(data, '%d') as dia, date_format(data, '%m') as mes, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data >= sysdate() ORDER BY data DESC");
+			for(let i=0; i < dateDataBase.length; i++){
+				
+				
+				let dataLocal = new Date(dateDataBase[i].mes);
+				let month = dataLocal.toLocaleString('default', {month:'short'});
+				mesData[i] =  month;
+				
 		} 
 		});
 
 		const opcoes = {
 			shows: shows,
-			mesData : mesData
+			dateDataBase : dateDataBase,
+			mesData : mesData,
 		};
 
 		res.render("index/shows", opcoes);
