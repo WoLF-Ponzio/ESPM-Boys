@@ -42,11 +42,11 @@ class IndexRoute {
 
 		});
 
-		const opcoes = {
+		const opcoes2 = {
 			showsPassados: showsPassados
 		};
 
-		res.render("index/shows", opcoes);
+		res.render("index/shows", opcoes2);
 	}
 
 	public async sobre(req: app.Request, res: app.Response) {
