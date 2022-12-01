@@ -19,7 +19,7 @@
 
     border-radius:12px 0px 0px 12px;    
     background: rgb(58,88,241);
-    background: linear-gradient(90deg, rgba(204,165,236,1) 6%, rgba(253,29,188,1) 50%, rgba(79,51,219,1) 100%);
+    background: linear-gradient(90deg, rgba(204,165,236,1) 0%, rgba(253,29,188,1) 29%, rgba(72,24,170,1) 80%);
     color: antiquewhite;
     text-align: center;
 }
