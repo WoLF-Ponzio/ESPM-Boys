@@ -5,69 +5,81 @@
 		</h1>
 	</div>
 
-	<% for (let i = 0; i < shows.length; i++) { %>
-		<div class="ticket">
-			<div class="coupon">
-				<div class="container">
-					<div class="row rowcoupon">						
-						<div class="col-sm-2 colunaEsquerda">
-							<h1><%= dateDataBase[i].dia %></h1>
-                            <h2 class="mes"><%= mesData[i] %>
-							</h2>
-						</div>
-						<div class="col-sm-6" >
-							<h1 class="tituloCupom">
-								<%= shows[i].nome %>
-							</h1>
-							<div class="textoCoupom">
-								<p>
-									<%= shows[i].data %>
-								</p>
-								<p>
-									<%= shows[i].endereco %>
-								</p>
+	<div class="lista">
+		<% for (let i = 0; i < shows.length; i++) { %>
+			<div class="ticket">
+				<div class="coupon">
+					<div class="container">
+						<div class="row rowcoupon">						
+							<div class="col-sm-2 colunaEsquerda">
+								<h1><%= dateDataBase[i].dia %></h1>
+    	                        <h2 class="mes"><%= mesData[i] %>
+								</h2>
 							</div>
+							<div class="col-sm-6" >
+								<h1 class="tituloCupom">
+									<%= shows[i].nome %>
+								</h1>
+								<div class="textoCoupom">
+									<p>
+										<%= shows[i].data %>
+									</p>
+									<p>
+										<%= shows[i].endereco %>
+									</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+    	                        <div class="textoCoupom">
+    	                            <a href="<%= shows[i].link %>"><button>Tickets</button></a>
+    	                        </div>
+    	                    </div>
 						</div>
-						<div class="col-sm-4">
-                            <div class="textoCoupom">
-                                <a href="<%= shows[i].link %>"><button>Tickets</button></a>
-                            </div>
-                        </div>
 					</div>
 				</div>
 			</div>
-		</div>
-	<% } %>
+		<% } %>
 
-	<h1>Shows Passados</h1>
+		<h1 class="tituloShow">Shows Passados</h1>
 
+		<% for (let j = 0; j < showsPassados.length; j++) { %>
+			<div class="ticket">
+				<div class="coupon">
+					<div class="container">
+						<div class="row rowcoupon">						
+							<div class="col-sm-2 colunaEsquerda">
+								<h1><%= dateDataBasePassados[j].dia %></h1>
+    	                        <h2 class="mes"><%= mesDataPassados[j] %>
+								</h2>
+							</div>
+							<div class="col-sm-6" >
+								<h1 class="tituloCupom">
+										<%= showsPassados[j].nome %>
+								</h1>
+								<div class="textoCoupom">
+									<p>
+										<%= showsPassados[j].data %>
+									</p>
+									<p>
+										<%= showsPassados[j].endereco %>
+									</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+    	                        <div class="textoCoupom">
+    	                            <a href="<%= showsPassados[j].link %>"><button>Tickets</button></a>
+    	                        </div>
+    	                    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% } %>
+	</div>
 </div>
 
+<div class="padding">
+
+</div>
 <%- contentFor("head") %>
 <link rel="stylesheet" type="text/css" href="/public/css/show.css"/>
-
-<script>
-
-		const regLT = /\</g;
-		const regGT = /\>/g;
-		const regAPOS = /\'/g;
-		const regQUOT = /\"/g;
-		const regGRAVE = /\`/g;
-
-			function encode(texto) {
-
-				if(!texto){
-					return "";
-				}
-
-				let temp = texto.replace(regLT, "&lt;");
-				temp = temp.replace(regGT, "&gt;");
-				temp = temp.replace(regAPOS, "&apos;");
-				temp = temp.replace(regQUOT, "&quot;");
-				temp = temp.replace(regGRAVE, "&grave;");
-
-				return temp;
-
-			}
-			
-</script>

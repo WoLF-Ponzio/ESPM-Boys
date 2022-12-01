@@ -17,12 +17,12 @@ link{
 
 /*carrossel*/
 .carousel .carousel-inner{
-    height:500px
+    height:500px;
+    background-color: #000;
     }
     .carousel-inner .carousel-item img{
-    min-height:200px;
-    /*prevent it from stretch in screen size < than 768px*/
-    object-fit:cover
+    object-fit: contain;
+    height: 500px;
     }
     
     @media(max-width:768px){

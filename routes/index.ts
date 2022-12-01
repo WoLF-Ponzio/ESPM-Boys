@@ -20,7 +20,10 @@ class IndexRoute {
 	public async shows(req: app.Request, res: app.Response) {
 		let shows: any[];
 		let dateDataBase:any[];
-		var  mesData = [];
+		let  mesData = [];
+		let showsPassados: any[];
+		let dateDataBasePassados:any[];
+		let  mesDataPassados = [];
 		
 		await app.sql.connect(async (sql) => {
 
@@ -32,7 +35,15 @@ class IndexRoute {
 				let dataLocal = new Date(dateDataBase[i].mes);
 				let month = dataLocal.toLocaleString('default', {month:'short'});
 				mesData[i] =  month;
-				
+
+				showsPassados = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data < sysdate() ORDER BY data DESC");
+				dateDataBasePassados = await sql.query("SELECT idshow, nome,date_format(data, '%d') as dia, date_format(data, '%m') as mes, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data < sysdate() ORDER BY data DESC");
+				for(let i=0; i < dateDataBasePassados.length; i++){
+					let dataLocal = new Date(dateDataBasePassados[i].mes);
+					let month = dataLocal.toLocaleString('default', {month:'short'});
+					mesDataPassados[i] =  month;
+				} 
+					
 		} 
 		});
 
@@ -40,25 +51,12 @@ class IndexRoute {
 			shows: shows,
 			dateDataBase : dateDataBase,
 			mesData : mesData,
+			showsPassados: showsPassados,
+			dateDataBasePassados : dateDataBasePassados,
+			mesDataPassados : mesDataPassados,
 		};
 
 		res.render("index/shows", opcoes);
-	}
-
-	public async showsPassados(req: app.Request, res: app.Response) {
-		let showsPassados: any[];
-
-		await app.sql.connect(async (sql) => {
-
-			showsPassados = await sql.query("SELECT idshow, nome, date_format(data, '%d/%m/%Y %H:%i') data, link, endereco FROM evento where data < sysdate() ORDER BY data DESC");
-
-		});
-
-		const opcoes2 = {
-			showsPassados: showsPassados
-		};
-
-		res.render("index/shows", opcoes2);
 	}
 
 	public async sobre(req: app.Request, res: app.Response) {

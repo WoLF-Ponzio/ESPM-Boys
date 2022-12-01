@@ -89,3 +89,11 @@
 .tituloCupom{
     margin-top: 2%;
 }
+
+.lista{
+    background-color: rgb(29, 29, 29); 
+    box-shadow: 2px 2px 2px #000;
+}
+.padding{
+    padding-bottom: 75px;
+}
