@@ -2,25 +2,32 @@
 	<h1>Shows</h1>
 
 	<% for (let i = 0; i < shows.length; i++) { %>
-		<div class="coupon">
-			<div class="container">
-				<div class="row">						
-					<div class="col-sm-2 colunaEsquerda">
-
-					</div>
-					<div class="col-sm-8" >
-						<h1>
-							<%= shows[i].nome %>
-						</h1>
-						<p>
-							<%= shows[i].data %>
-						</p>
-						<p>
-							<%= shows[i].endereco %>
-						</p>
-						<p>
-							<a href="<%= shows[i].link %>">Acesse o link</a>
-						</p>
+		<div class="ticket">
+			<div class="coupon">
+				<div class="container">
+					<div class="row">						
+						<div class="col-sm-2 colunaEsquerda">
+							<h1>13</h1>
+                            <h2 class="mes">Out</h2>
+						</div>
+						<div class="col-sm-6" >
+							<h1>
+								<%= shows[i].nome %>
+							</h1>
+							<div class="textoCoupom">
+								<p>
+									<%= shows[i].data %>
+								</p>
+								<p>
+									<%= shows[i].endereco %>
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-4">
+                            <div class="textoCoupom">
+                                <a href="<%= shows[i].link %>"><button>Tickets</button></a>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>
