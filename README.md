@@ -34,6 +34,9 @@
             O site conterá uma página principal com algumas imagens e descrição dos membros da banda, uma página com a discografia 
             hávendo mais uma página para cada disco, uma página sobre os shows, que terá a interação com o banco de dados e uma sobre a banda. 
           </dd>
+      <dt>
+            Menções Honrosas para o Prof. Carlos Rafael, que orientou e direciou o grupo durante o projeto.
+      </dt>
     </dl>
 </div>
 
